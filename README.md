@@ -9,6 +9,8 @@ basically just a virtualenv with an icon file and an SSL certificate file.
 
 ## Bundling
 
+### First build
+
 Follow these steps to create an app bundle on OS X (some commands require sudo):
 
 - Install `pip` with `easy_install pip`
@@ -19,6 +21,19 @@ Follow these steps to create an app bundle on OS X (some commands require sudo):
 - Build the app using `python setup.py py2app`
 
 The app is now in the `dist` folder.
+
+### Rebuilding
+
+If you wish to rebuild the app, just
+
+- `cd` into the `git` repo
+- Delete the `build` and `dist` folders with `rm -rf build dist`
+- Activate the `virtualenv` with `source python/bin/activate`
+- Build the app using `python setup.py py2app`
+
+The app is now in the `dist` folder.
+
+Note that you could start anew by also removing the `python` folder with `rm -rf python` and re-executing the `virtualenv` command described in the previous section.
 
 ## Instructions
 
