@@ -9,9 +9,11 @@ basically just a virtualenv with an icon file and an SSL certificate file.
 
 ## Bundling
 
-Follow these steps to create an app bundle on OS X:
+Follow these steps to create an app bundle on OS X (some commands require sudo):
 
-- Clone and `cd` into the repository.
+- Install `pip` with `easy_install pip`
+- Install `virtualenv` with `pip install virtualenv`
+- Clone and `cd` into the repository
 - Initialize the virtualenv with
 `virtualenv --no-site-packages --distribute python && source python/bin/activate && pip install -r requirements.txt`
 - Build the app using `python setup.py py2app`
